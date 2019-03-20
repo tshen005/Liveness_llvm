@@ -16,17 +16,17 @@
 using namespace llvm;
 using namespace std;
 
-#define DEBUG_TYPE "ValueNumbering"
+#define DEBUG_TYPE "Liveness"
 
 using namespace llvm;
 
 set<string> opSkip = {"br", "ret","icmp"};
 
 namespace {
-struct ValueNumbering : public FunctionPass {
+struct Liveness : public FunctionPass {
     string func_name = "test1";
     static char ID;
-    ValueNumbering() : FunctionPass(ID) {}
+    Liveness() : FunctionPass(ID) {}
 
     void initial(vector<BasicBlock*>& workList, vector<set<Value*>>& UEVar, vector<set<Value*>>& VarKill){
 
@@ -65,7 +65,7 @@ struct ValueNumbering : public FunctionPass {
 
     bool runOnFunction(Function &F) override {
         
-        errs() << "\n==================================== " << F.getName() << " ====================================" << "\n";
+        errs() << "\n\n==================================== " << F.getName() << " ====================================" << "\n";
         //if(F.getName() != func_name) return 0;
         vector<BasicBlock*> workList;   // keep all the basic blocks
         unordered_map<BasicBlock*, int> BBtoId;
@@ -113,7 +113,7 @@ struct ValueNumbering : public FunctionPass {
 }; 
 }  
 
-char ValueNumbering::ID = 0;
-static RegisterPass<ValueNumbering> X("ValueNumbering", "ValueNumbering Pass",
+char Liveness::ID = 0;
+static RegisterPass<Liveness> X("Liveness", "Liveness Analysis",
                              false /* Only looks at CFG */,
                              false /* Analysis Pass */);

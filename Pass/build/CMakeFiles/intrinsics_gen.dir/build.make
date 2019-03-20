@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.12.1/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/shen/Documents/GitHub/LVN-LLVM/HelloPass-LLVM/Pass/Transforms/ValueNumbering
+CMAKE_SOURCE_DIR = /Users/shen/Documents/GitHub/LVN-LLVM/Liveness/Pass/Transforms/LivenessAnalysis
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/shen/Documents/GitHub/LVN-LLVM/HelloPass-LLVM/Pass/build
+CMAKE_BINARY_DIR = /Users/shen/Documents/GitHub/LVN-LLVM/Liveness/Pass/build
 
 # Utility rule file for intrinsics_gen.
 
@@ -67,6 +67,6 @@ CMakeFiles/intrinsics_gen.dir/clean:
 .PHONY : CMakeFiles/intrinsics_gen.dir/clean
 
 CMakeFiles/intrinsics_gen.dir/depend:
-	cd /Users/shen/Documents/GitHub/LVN-LLVM/HelloPass-LLVM/Pass/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/shen/Documents/GitHub/LVN-LLVM/HelloPass-LLVM/Pass/Transforms/ValueNumbering /Users/shen/Documents/GitHub/LVN-LLVM/HelloPass-LLVM/Pass/Transforms/ValueNumbering /Users/shen/Documents/GitHub/LVN-LLVM/HelloPass-LLVM/Pass/build /Users/shen/Documents/GitHub/LVN-LLVM/HelloPass-LLVM/Pass/build /Users/shen/Documents/GitHub/LVN-LLVM/HelloPass-LLVM/Pass/build/CMakeFiles/intrinsics_gen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/shen/Documents/GitHub/LVN-LLVM/Liveness/Pass/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/shen/Documents/GitHub/LVN-LLVM/Liveness/Pass/Transforms/LivenessAnalysis /Users/shen/Documents/GitHub/LVN-LLVM/Liveness/Pass/Transforms/LivenessAnalysis /Users/shen/Documents/GitHub/LVN-LLVM/Liveness/Pass/build /Users/shen/Documents/GitHub/LVN-LLVM/Liveness/Pass/build /Users/shen/Documents/GitHub/LVN-LLVM/Liveness/Pass/build/CMakeFiles/intrinsics_gen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/intrinsics_gen.dir/depend
 

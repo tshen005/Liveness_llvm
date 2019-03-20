@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/Users/shen/Documents/GitHub/LVN-LLVM/HelloPass-LLVM/Pass/Transforms/ValueNumbering/CMakeLists.txt"
+  "/Users/shen/Documents/GitHub/LVN-LLVM/Liveness/Pass/Transforms/LivenessAnalysis/CMakeLists.txt"
   "CMakeFiles/3.12.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.12.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.12.1/CMakeSystem.cmake"
@@ -124,6 +124,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/LLVMValueNumberingPass.dir/DependInfo.cmake"
+  "CMakeFiles/LivenessAnalysis.dir/DependInfo.cmake"
   "CMakeFiles/intrinsics_gen.dir/DependInfo.cmake"
   )

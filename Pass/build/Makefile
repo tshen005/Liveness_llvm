@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.12.1/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/shen/Documents/GitHub/LVN-LLVM/HelloPass-LLVM/Pass/Transforms/ValueNumbering
+CMAKE_SOURCE_DIR = /Users/shen/Documents/GitHub/LVN-LLVM/Liveness/Pass/Transforms/LivenessAnalysis
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/shen/Documents/GitHub/LVN-LLVM/HelloPass-LLVM/Pass/build
+CMAKE_BINARY_DIR = /Users/shen/Documents/GitHub/LVN-LLVM/Liveness/Pass/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shen/Documents/GitHub/LVN-LLVM/HelloPass-LLVM/Pass/build/CMakeFiles /Users/shen/Documents/GitHub/LVN-LLVM/HelloPass-LLVM/Pass/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shen/Documents/GitHub/LVN-LLVM/Liveness/Pass/build/CMakeFiles /Users/shen/Documents/GitHub/LVN-LLVM/Liveness/Pass/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shen/Documents/GitHub/LVN-LLVM/HelloPass-LLVM/Pass/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shen/Documents/GitHub/LVN-LLVM/Liveness/Pass/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named LLVMValueNumberingPass
+# Target rules for targets named LivenessAnalysis
 
 # Build rule for target.
-LLVMValueNumberingPass: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 LLVMValueNumberingPass
-.PHONY : LLVMValueNumberingPass
+LivenessAnalysis: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LivenessAnalysis
+.PHONY : LivenessAnalysis
 
 # fast build rule for target.
-LLVMValueNumberingPass/fast:
-	$(MAKE) -f CMakeFiles/LLVMValueNumberingPass.dir/build.make CMakeFiles/LLVMValueNumberingPass.dir/build
-.PHONY : LLVMValueNumberingPass/fast
+LivenessAnalysis/fast:
+	$(MAKE) -f CMakeFiles/LivenessAnalysis.dir/build.make CMakeFiles/LivenessAnalysis.dir/build
+.PHONY : LivenessAnalysis/fast
 
 #=============================================================================
 # Target rules for targets named intrinsics_gen
@@ -136,32 +136,32 @@ intrinsics_gen/fast:
 	$(MAKE) -f CMakeFiles/intrinsics_gen.dir/build.make CMakeFiles/intrinsics_gen.dir/build
 .PHONY : intrinsics_gen/fast
 
-ValueNumbering.o: ValueNumbering.cpp.o
+Liveness.o: Liveness.cpp.o
 
-.PHONY : ValueNumbering.o
+.PHONY : Liveness.o
 
 # target to build an object file
-ValueNumbering.cpp.o:
-	$(MAKE) -f CMakeFiles/LLVMValueNumberingPass.dir/build.make CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.o
-.PHONY : ValueNumbering.cpp.o
+Liveness.cpp.o:
+	$(MAKE) -f CMakeFiles/LivenessAnalysis.dir/build.make CMakeFiles/LivenessAnalysis.dir/Liveness.cpp.o
+.PHONY : Liveness.cpp.o
 
-ValueNumbering.i: ValueNumbering.cpp.i
+Liveness.i: Liveness.cpp.i
 
-.PHONY : ValueNumbering.i
+.PHONY : Liveness.i
 
 # target to preprocess a source file
-ValueNumbering.cpp.i:
-	$(MAKE) -f CMakeFiles/LLVMValueNumberingPass.dir/build.make CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.i
-.PHONY : ValueNumbering.cpp.i
+Liveness.cpp.i:
+	$(MAKE) -f CMakeFiles/LivenessAnalysis.dir/build.make CMakeFiles/LivenessAnalysis.dir/Liveness.cpp.i
+.PHONY : Liveness.cpp.i
 
-ValueNumbering.s: ValueNumbering.cpp.s
+Liveness.s: Liveness.cpp.s
 
-.PHONY : ValueNumbering.s
+.PHONY : Liveness.s
 
 # target to generate assembly for a file
-ValueNumbering.cpp.s:
-	$(MAKE) -f CMakeFiles/LLVMValueNumberingPass.dir/build.make CMakeFiles/LLVMValueNumberingPass.dir/ValueNumbering.cpp.s
-.PHONY : ValueNumbering.cpp.s
+Liveness.cpp.s:
+	$(MAKE) -f CMakeFiles/LivenessAnalysis.dir/build.make CMakeFiles/LivenessAnalysis.dir/Liveness.cpp.s
+.PHONY : Liveness.cpp.s
 
 # Help Target
 help:
@@ -171,11 +171,11 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... LLVMValueNumberingPass"
+	@echo "... LivenessAnalysis"
 	@echo "... intrinsics_gen"
-	@echo "... ValueNumbering.o"
-	@echo "... ValueNumbering.i"
-	@echo "... ValueNumbering.s"
+	@echo "... Liveness.o"
+	@echo "... Liveness.i"
+	@echo "... Liveness.s"
 .PHONY : help
 
 
