@@ -1,0 +1,19 @@
+digraph "CFG for 'test1' function" {
+	label="CFG for 'test1' function";
+
+	Node0x7f91bbc1a130 [shape=record,label="{%6:\l  %7 = add nsw i32 %2, 11\l  %8 = mul nsw i32 %5, %4\l  br label %9\l}"];
+	Node0x7f91bbc1a130 -> Node0x7f91bbc1a0f0;
+	Node0x7f91bbc1a0f0 [shape=record,label="{%9:\l\l  %.01 = phi i32 [ %8, %6 ], [ %.1, %18 ]\l  %.0 = phi i32 [ %7, %6 ], [ %12, %18 ]\l  %10 = icmp slt i32 %.0, %.01\l  br i1 %10, label %11, label %20\l|{<s0>T|<s1>F}}"];
+	Node0x7f91bbc1a0f0:s0 -> Node0x7f91bbc1a3a0;
+	Node0x7f91bbc1a0f0:s1 -> Node0x7f91bbc1a420;
+	Node0x7f91bbc1a3a0 [shape=record,label="{%11:\l\l  %12 = mul nsw i32 %.01, %2\l  %13 = icmp sgt i32 %.01, %2\l  br i1 %13, label %14, label %16\l|{<s0>T|<s1>F}}"];
+	Node0x7f91bbc1a3a0:s0 -> Node0x7f91bbc1a3e0;
+	Node0x7f91bbc1a3a0:s1 -> Node0x7f91bbc1a640;
+	Node0x7f91bbc1a3e0 [shape=record,label="{%14:\l\l  %15 = add nsw i32 %.01, 1\l  br label %18\l}"];
+	Node0x7f91bbc1a3e0 -> Node0x7f91bbc1a170;
+	Node0x7f91bbc1a640 [shape=record,label="{%16:\l\l  %17 = mul nsw i32 %.01, %2\l  br label %18\l}"];
+	Node0x7f91bbc1a640 -> Node0x7f91bbc1a170;
+	Node0x7f91bbc1a170 [shape=record,label="{%18:\l\l  %.1 = phi i32 [ %15, %14 ], [ %.01, %16 ]\l  %19 = mul nsw i32 %.1, %2\l  br label %9\l}"];
+	Node0x7f91bbc1a170 -> Node0x7f91bbc1a0f0;
+	Node0x7f91bbc1a420 [shape=record,label="{%20:\l\l  ret void\l}"];
+}

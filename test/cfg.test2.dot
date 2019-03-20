@@ -1,0 +1,26 @@
+digraph "CFG for 'test2' function" {
+	label="CFG for 'test2' function";
+
+	Node0x7f91bbc1a8b0 [shape=record,label="{%5:\l  br label %6\l}"];
+	Node0x7f91bbc1a8b0 -> Node0x7f91bbc1a8f0;
+	Node0x7f91bbc1a8f0 [shape=record,label="{%6:\l\l  %.06 = phi i32 [ %4, %5 ], [ %19, %16 ]\l  %.03 = phi i32 [ %3, %5 ], [ %.25, %16 ]\l  %.02 = phi i32 [ %2, %5 ], [ %.2, %16 ]\l  %7 = icmp slt i32 %.06, 100\l  br i1 %7, label %8, label %20\l|{<s0>T|<s1>F}}"];
+	Node0x7f91bbc1a8f0:s0 -> Node0x7f91bbc1b170;
+	Node0x7f91bbc1a8f0:s1 -> Node0x7f91bbc1b1f0;
+	Node0x7f91bbc1b170 [shape=record,label="{%8:\l\l  %9 = icmp sgt i32 %.02, 20\l  br i1 %9, label %10, label %15\l|{<s0>T|<s1>F}}"];
+	Node0x7f91bbc1b170:s0 -> Node0x7f91bbc1a600;
+	Node0x7f91bbc1b170:s1 -> Node0x7f91bbc1b420;
+	Node0x7f91bbc1a600 [shape=record,label="{%10:\l\l  %11 = icmp slt i32 %.03, 100\l  br i1 %11, label %12, label %13\l|{<s0>T|<s1>F}}"];
+	Node0x7f91bbc1a600:s0 -> Node0x7f91bbc1b3e0;
+	Node0x7f91bbc1a600:s1 -> Node0x7f91bbc1b5d0;
+	Node0x7f91bbc1b3e0 [shape=record,label="{%12:\l\l  br label %14\l}"];
+	Node0x7f91bbc1b3e0 -> Node0x7f91bbc1b590;
+	Node0x7f91bbc1b5d0 [shape=record,label="{%13:\l\l  br label %14\l}"];
+	Node0x7f91bbc1b5d0 -> Node0x7f91bbc1b590;
+	Node0x7f91bbc1b590 [shape=record,label="{%14:\l\l  %.14 = phi i32 [ 101, %12 ], [ %.03, %13 ]\l  %.1 = phi i32 [ %.02, %12 ], [ 12000, %13 ]\l  br label %16\l}"];
+	Node0x7f91bbc1b590 -> Node0x7f91bbc1ac00;
+	Node0x7f91bbc1b420 [shape=record,label="{%15:\l\l  br label %16\l}"];
+	Node0x7f91bbc1b420 -> Node0x7f91bbc1ac00;
+	Node0x7f91bbc1ac00 [shape=record,label="{%16:\l\l  %.25 = phi i32 [ %.14, %14 ], [ 2200, %15 ]\l  %.2 = phi i32 [ %.1, %14 ], [ 2544, %15 ]\l  %.01 = phi i32 [ 510, %14 ], [ 231, %15 ]\l  %.0 = phi i32 [ 200, %14 ], [ 210, %15 ]\l  %17 = add nsw i32 %.0, %.01\l  %18 = add nsw i32 %.2, %.25\l  %19 = add nsw i32 %.06, 1\l  br label %6\l}"];
+	Node0x7f91bbc1ac00 -> Node0x7f91bbc1a8f0;
+	Node0x7f91bbc1b1f0 [shape=record,label="{%20:\l\l  ret void\l}"];
+}

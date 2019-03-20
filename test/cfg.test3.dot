@@ -1,0 +1,12 @@
+digraph "CFG for 'test3' function" {
+	label="CFG for 'test3' function";
+
+	Node0x7f91bbc1bee0 [shape=record,label="{%3:\l  %4 = add nsw i32 %0, %1\l  br label %5\l}"];
+	Node0x7f91bbc1bee0 -> Node0x7f91bbc1bfd0;
+	Node0x7f91bbc1bfd0 [shape=record,label="{%5:\l\l  %.01 = phi i32 [ %2, %3 ], [ %6, %8 ]\l  %.0 = phi i32 [ %4, %3 ], [ %7, %8 ]\l  %6 = add nsw i32 %.01, %1\l  %7 = sub nsw i32 %.0, 1\l  br label %8\l}"];
+	Node0x7f91bbc1bfd0 -> Node0x7f91bbc1c0a0;
+	Node0x7f91bbc1c0a0 [shape=record,label="{%8:\l\l  %9 = icmp sgt i32 %7, 0\l  br i1 %9, label %5, label %10\l|{<s0>T|<s1>F}}"];
+	Node0x7f91bbc1c0a0:s0 -> Node0x7f91bbc1bfd0;
+	Node0x7f91bbc1c0a0:s1 -> Node0x7f91bbc1bf20;
+	Node0x7f91bbc1bf20 [shape=record,label="{%10:\l\l  %11 = add nsw i32 %6, 1\l  ret void\l}"];
+}
